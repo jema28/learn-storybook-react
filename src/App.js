@@ -1,5 +1,13 @@
 import React from 'react'
+import { Provider } from 'react-redux'
+import store from './lib/redux'
 
-const App = () => <p>Learn storybook</p>
+import InboxScreen from './components/InboxScreen'
+
+const App = () => (
+  <Provider store={store}>
+    <InboxScreen />
+  </Provider>
+)
 
 export default App
